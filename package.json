@@ -1,0 +1,22 @@
+{
+  "name": "tdb-map",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel public/index.html --global tdbMap",
+    "build": "parcel build public/index.html --no-content-hash --no-source-maps --global tdbMap",
+    "clean": "rm -rf .cache dist"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.0",
+    "@babel/plugin-transform-runtime": "^7.10.0",
+    "@babel/runtime-corejs2": "^7.10.0",
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
+  },
+  "dependencies": {
+    "mapbox-gl": "^1.10.1"
+  }
+}
