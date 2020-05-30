@@ -62,7 +62,7 @@ export function create(target, layers) {
             <div class="tdb-map-popup">
               <h3>${info.text}</h3>
               <p>${info.address}</p>
-              ${info.link !== 'null' ? `<a href="${info.link}">Meer info</a>` : ''}
+              ${info.link !== 'null' ? `<a ${layer.targetBlank ? 'target="_blank"' : ''} href="${info.link}">Meer info</a>` : ''}
             </div>
           `
 
