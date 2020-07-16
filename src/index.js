@@ -28,6 +28,8 @@ export function create(target, layers) {
     zoom: 12,
   })
   map.fitBounds(bounds, { duration: 0, padding: 45 })
+  map.scrollZoom.disable()
+  map.addControl(new mapbox.NavigationControl(), 'bottom-right')
 
   map.on('load', () => {
     layers.forEach(layer => {
