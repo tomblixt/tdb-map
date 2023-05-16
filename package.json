@@ -4,19 +4,22 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel public/index.html --global tdbMap",
-    "build": "parcel build public/index.html --no-content-hash --no-source-maps --global tdbMap",
-    "clean": "rm -rf .cache dist"
+    "build": "parcel build src/index.js --no-content-hash --no-source-maps --global tdbMap --out-dir tdb-map --public-url public/ --out-file tdb-map.js"
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "public",
+        "staticOutDir": "."
+      }
+    ]
   },
   "devDependencies": {
-    "@babel/core": "^7.10.0",
-    "@babel/plugin-transform-runtime": "^7.10.0",
-    "@babel/runtime-corejs2": "^7.10.0",
-    "babel-preset-env": "^1.7.0",
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.5"
+    "@babel/core": "^7.2.0",
+    "parcel-bundler": "^1.6.1",
+    "parcel-plugin-static-files-copy": "^2.6.0"
   },
   "dependencies": {
-    "mapbox-gl": "^1.10.1"
+    "mapbox-gl": "^2.14.1"
   }
 }
